@@ -183,12 +183,10 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 function getFullNames(runners) {
   const fullName = [];
   runners.forEach(function(runners){
-    return runners.first_name, runners.last_name;
-
-});
+fullName.push (`${runners.last_name}, ${runners.first_name}`);
+  })
 return fullName;
 }
-
 
 /**
  * ### Challenge `firstNamesAllCaps`
