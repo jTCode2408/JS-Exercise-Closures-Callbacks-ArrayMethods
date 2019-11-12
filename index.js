@@ -201,6 +201,11 @@ return fullName;
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners){
+  const capsNames = 
+  runners.map(function(currentValue){
+    return currentValue.first_name.toUpperCase();
+});
+return capsNames;
 }
 
 /**
@@ -216,8 +221,12 @@ function firstNamesAllCaps(runners){
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  const shirts = [];
+  runners.filter(function(currentValue){
+    return currentValue.shirt_size ;
+  })
+  return shirts;
 }
 
 /**
@@ -257,9 +266,9 @@ function tallyUpDonations(runners) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+  let count = 0;
+  return function counter() {
+   return count++;
   }
   // BROKEN CODE ENDS
 }
