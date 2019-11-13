@@ -296,16 +296,13 @@ function counterMaker() {
 function counterMakerWithLimit(maxValue) {
   /* CODE HERE */
   let count = 0;
- function counter (){
-   if (count < maxValue){
-      count++;
-    } else 
-return counter;
+  return function(){
+  if (count > maxValue){
+  count = 0;
+  }
+   return count++;
+  }
 }
-}
-
-
-
 
 
 /////////////// END OF CHALLENGE ///////////////
