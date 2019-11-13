@@ -224,7 +224,7 @@ return capsNames;
 function getRunnersByTShirtSize(runners, tShirtSize) {
   const shirts = [];
   runners.filter(function(currentValue){
-    return currentValue.shirt_size ;
+    return currentValue.shirt_size;
   })
   return shirts;
 }
@@ -293,8 +293,12 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
+function counterMakerWithLimit(max) {
   /* CODE HERE */
+  let count = 0;
+  return function(max){
+    return ++count;
+  }
 }
 
 /////////////// END OF CHALLENGE ///////////////
