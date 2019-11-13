@@ -135,7 +135,7 @@ return callback (num1 * num2);
  * should return "sad".
 */
 function processContains(item, list, callback) {
-return callback (items, list)
+return callback (list.includes(item));
 return true;
 }
 
@@ -222,9 +222,9 @@ return capsNames;
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 function getRunnersByTShirtSize(runners, tShirtSize) {
-  const shirts = [];
+  const shirts =
   runners.filter(function(currentValue){
-    return currentValue.shirt_size;
+    return currentValue.shirt_size === tShirtSize;
   })
   return shirts;
 }
@@ -293,13 +293,20 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(max) {
+function counterMakerWithLimit(maxValue) {
   /* CODE HERE */
   let count = 0;
-  return function(max){
-    return ++count;
-  }
+ function counter (){
+   if (count < maxValue){
+      count++;
+    } else 
+return counter;
 }
+}
+
+
+
+
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
